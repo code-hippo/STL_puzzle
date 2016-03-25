@@ -1,0 +1,35 @@
+// line beginning with "//" are comments and are ignored by the parser. Empty lines are ignored too.
+//Incorrect lines without commenting out will generate an error by the parse.
+
+solid cube_corner
+          facet   normal 0.0 -1.0 0.0
+            outer loop //
+              vertex 0.0 0.0 0.0
+              vertex 1.0 0.0 0.0
+              vertex 0.0 0.0 1.0 //check
+            endloop
+
+//
+          endfacet
+          facet normal 0.0 0.0 -1.0
+            outer loop
+              vertex 0.0 0.0 0.0
+              vertex 0.0 1.0 0.0
+              vertex 1.0 0.0 0.0
+            endloop
+          endfacet
+          facet normal -1.0 0.0 0.0
+            outer loop
+              vertex 0.0 0.0 0.0
+              vertex 0.0 0.0 1.0
+              vertex 0.0 1.0 0.0
+            endloop
+          endfacet
+          facet normal 0.577 0.577 0.577
+            outer loop
+              vertex 1.0 0.0 0.0
+              vertex 0.0 1.0 0.0
+              vertex 0.0 0.0 1.0
+            endloop
+          endfacet
+        endsolid
